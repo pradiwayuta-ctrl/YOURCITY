@@ -1,0 +1,13 @@
+{
+  "name": "your-city-phone",
+  "version": "0.3.0",
+  "type": "module",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "start": "node --env-file=.env server/dev.js",
+    "migrate": "node server/db/migrate.js",
+    "migrate:local": "node --env-file=.env server/db/migrate.js",
+    "set-webhook": "node --env-file=.env scripts/set-webhook.js"
+  },
+  "dependencies": { "express": "^4.19.2", "grammy": "^1.30.0", "pg": "^8.12.0" }
+}

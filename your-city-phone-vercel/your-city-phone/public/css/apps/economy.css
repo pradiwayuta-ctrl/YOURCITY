@@ -1,0 +1,25 @@
+.app-window .body h4 { margin: 22px 0 8px; font-size: 15px; opacity: .7; font-weight: 500; }
+.dcard { margin-top: 18px; padding: 20px; border-radius: 22px; color: var(--navy);
+  background: linear-gradient(135deg, #f7e4b0, var(--gold) 55%, var(--amber)); box-shadow: 0 14px 34px #0006; }
+.dcard small { opacity: .7; }
+.dcard .bal { font-size: 34px; font-weight: 700; margin: 14px 0 18px; font-variant-numeric: tabular-nums; }
+.dcard .meta { display: flex; justify-content: space-between; font-size: 13px; opacity: .8; }
+.actions { margin-top: 16px; display: grid; }
+.go, .ghost { padding: 14px; border-radius: 16px; font-weight: 600; transition: transform .2s var(--spring), opacity .2s; }
+.go { background: var(--gold); color: var(--navy); } .ghost { background: #ffffff18; }
+.go:active, .ghost:active { transform: scale(.96); } button:disabled { opacity: .45; }
+.row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ffffff12; }
+.row i { font-style: normal; font-size: 24px; } .row div { flex: 1; min-width: 0; }
+.row b { display: block; font-size: 15px; font-weight: 500; } .row small { opacity: .6; font-size: 12px; }
+.row .in { color: #7fe0a8; } .row .out { color: #ff9b86; } .row button { padding: 8px 16px; font-size: 14px; }
+.empty-note { opacity: .6; font-size: 14px; padding: 8px 0; }
+.card-sk { height: 150px; margin-top: 18px; border-radius: 22px; }
+.skeleton { background: linear-gradient(90deg, #ffffff10, #ffffff22, #ffffff10); background-size: 200% 100%; animation: sk 1.2s linear infinite; }
+@keyframes sk { to { background-position: -200% 0; } }
+.tsheet { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 20px calc(24px + env(safe-area-inset-bottom)); border-radius: 28px 28px 0 0;
+  background: #0d2646f2; backdrop-filter: blur(18px); display: grid; gap: 12px; transform: translateY(105%); transition: transform .5s var(--spring); z-index: 5; }
+.tsheet.show { transform: none; } .tsheet h3 { font-family: var(--serif); }
+.tsheet input { padding: 14px; border-radius: 14px; border: 0; background: #ffffff14; color: inherit; font: inherit; }
+.tsheet .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } .err { color: #ff9b86; font-size: 13px; min-height: 16px; }
+.jcard { margin-top: 18px; padding: 24px; border-radius: 22px; background: #ffffff12; text-align: center; display: grid; gap: 6px; }
+.jcard i { font-style: normal; font-size: 44px; } .jcard b { font-size: 20px; } .jcard small { opacity: .65; } .jcard .go { margin-top: 12px; }

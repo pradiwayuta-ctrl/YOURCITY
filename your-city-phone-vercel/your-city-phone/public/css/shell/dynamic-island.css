@@ -1,0 +1,12 @@
+.island { position: absolute; z-index: 60; top: calc(10px + env(safe-area-inset-top)); left: 50%;
+  width: 118px; height: 34px; transform: translateX(-50%); border-radius: 22px; background: #000;
+  display: flex; align-items: center; gap: 12px; padding: 0 14px; overflow: hidden; color: var(--foam);
+  box-shadow: 0 0 0 1px #f4b94222;
+  transition: width .55s var(--spring), height .55s var(--spring), border-radius .55s var(--spring); }
+.island.open { width: calc(100% - 24px); height: 72px; border-radius: 36px; padding: 0 20px; }
+.island .ic { font-style: normal; font-size: 26px; opacity: 0; transform: scale(.4); transition: .4s var(--spring) .1s; }
+.island div { min-width: 0; opacity: 0; transform: translateY(6px); transition: .35s var(--ease) .12s; }
+.island b { display: block; font-size: 13px; color: var(--gold); font-weight: 600; }
+.island span { display: block; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.island.open .ic, .island.open div { opacity: 1; transform: none; }
+.island:not(.open) .ic, .island:not(.open) div { transition-duration: .15s; transition-delay: 0s; }
